@@ -4,7 +4,7 @@ import Sidebar from "@/components/customLayout";
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import Head from "next/head";
 import Navbar from "@/components/header";
-import "../../src/app/globals.css"
+import "../../src/app/globals.css";
 const theme = createTheme({
   palette: {
     primary: {
@@ -37,14 +37,13 @@ export default function RootLayout({ children }) {
         <ThemeProvider theme={theme}>
           <CssBaseline />
 
-          
           <Navbar />
+          <div className=" " style={{display: 'flex'}}>
           <Sidebar />
-        
-         
+          <div style={{display: 'inline-block', width:'100%', padding:'30px'}}>
+          {children}  </div>        </div>
 
-          {children}
-        </ThemeProvider>
+          </ThemeProvider>
       </body>
     </html>
   );

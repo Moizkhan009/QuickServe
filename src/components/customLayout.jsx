@@ -30,25 +30,32 @@ import {
   ConfirmationNumber as ConfirmationNumberIcon, // For Ticket Configuration
 } from "@mui/icons-material";
 import Link from "next/link";
-
+import { useRouter } from "next/navigation";
 const Sidebar = () => {
   const [open, setOpen] = useState({}); // State for submenu expansion
   const [collapsed, setCollapsed] = useState(false); // State for sidebar collapse
-
+  const router = useRouter()
   const menus = [
+
+    {
+      heading: null, // No heading for logout
+      items: [
+        { title: "Dashboard", url: "/", icon: <DashboardIcon /> },
+      ],
+    },
     {
       heading: "USER MANAGEMENT",
       items: [
-        { title: "Users", url: "/users", icon: <PeopleIcon /> },
-        { title: "Service Provider", url: "/service-provider", icon: <BusinessIcon /> },
-        { title: "Add Provider", url: "/add-provider", icon: <AddCircleIcon /> },
+        { title: "Users", url: "/admin/users", icon: <PeopleIcon /> },
+        { title: "Service Provider", url: "/admin/ServiceProvider", icon: <BusinessIcon /> },
+        { title: "Add Provider", url: "/admin/AddProvider", icon: <AddCircleIcon /> },
       ],
     },
     {
       heading: "SERVICE PROVIDERS",
       items: [
-        { title: "Featured SP", url: "/featured-sp", icon: <StarIcon /> },
-        { title: "Pin Down SP", url: "/pin-down-sp", icon: <PushPinIcon /> },
+        { title: "Featured SP", url: "/admin/FeaturedSp", icon: <StarIcon /> },
+        { title: "Pin Down SP", url: "/admin/pin-down-sp", icon: <PushPinIcon /> },
       ],
     },
     {
@@ -75,8 +82,8 @@ const Sidebar = () => {
     {
       heading: "DATA MANAGEMENT",
       items: [
-        { title: "App Configuration", url: "/app-configuration", icon: <AccountTreeIcon /> },
-        { title: "Ticket Configuration", url: "/ticket-configuration", icon: <ConfirmationNumberIcon /> },
+        { title: "App Configuration", url: "/admin/app-configuration", icon: <AccountTreeIcon /> },
+        { title: "Ticket Configuration", url: "/admin/ticket-configuration", icon: <ConfirmationNumberIcon /> },
       ],
     },
     {
@@ -173,7 +180,7 @@ const Sidebar = () => {
                     placement="right"
                   >
                     <ListItemButton
-                      onClick={() => item.submenus && handleClick(item.title)}
+                      onClick={() => router.push(item.url)}
                       sx={{
                         justifyContent: collapsed ? "center" : "flex-start",
                         color: "#868aa8", // Font color
