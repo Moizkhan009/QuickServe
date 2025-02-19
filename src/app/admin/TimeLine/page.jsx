@@ -1,13 +1,15 @@
 import React from 'react'
 import BreadcrumbsComponent from "@/components/BreadCrumb"
 
+
 function page() {
-  const paths=["Service Providers"]
+
+const  paths = ["Service Provider", "TimeLine"]
   return (
     <>    
      <div>
     <BreadcrumbsComponent 
-      title="Service Providers"
+      title="TimeLine"
       paths={paths}
     />
   </div>

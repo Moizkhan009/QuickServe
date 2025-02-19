@@ -3,9 +3,17 @@ import BreadcrumbsComponent from "@/components/BreadCrumb"
 
 
 function page() {
+  const  paths = ["Service Provider", "Featured Service Provider"]
   return (
-    <>   <BreadcrumbsComponent/>
+    <>    
+     <div>
+    <BreadcrumbsComponent 
+      title="Featured Service Provider"
+      paths={paths}
+    />
+  </div>
     <div>page</div></>
+ 
   )
 }
 

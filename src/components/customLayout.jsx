@@ -55,41 +55,38 @@ const Sidebar = () => {
       heading: "SERVICE PROVIDERS",
       items: [
         { title: "Featured SP", url: "/admin/FeaturedSp", icon: <StarIcon /> },
-        { title: "Pin Down SP", url: "/admin/pin-down-sp", icon: <PushPinIcon /> },
+        { title: "Pin Down SP", url: "/admin/PinDownSp", icon: <PushPinIcon /> },
       ],
     },
     {
       heading: "BOOKINGS MANAGEMENT",
       items: [
-        { title: "TimeLine", url: "/timeline", icon: <TimelineIcon /> },
-        { title: "Bookings", url: "/bookings", icon: <ReceiptIcon /> },
+        { title: "TimeLine", url: "/admin/TimeLine", icon: <TimelineIcon /> },
+        { title: "Bookings", url: "/admin/Bookings", icon: <ReceiptIcon /> },
       ],
     },
     {
       heading: "SERVICE MANAGEMENT",
       items: [
-        {
-          title: "Invoicing",
-          icon: <DescriptionIcon />,
-          submenus: [
-            { title: "Create Invoice", url: "/create-invoice" },
-            { title: "Accounting Report", url: "/accounting-report" },
-            { title: "Refund Report", url: "/refund-report" },
-          ],
-        },
+      
+            { title: "Create Invoice", url: "/admin/CreateInvoice" , icon: <DescriptionIcon  />},
+            { title: "Accounting Report", url: "/admin/AccountingReport" , icon: <DescriptionIcon  />},
+            { title: "Refund Report", url: "/admin/RefundReport" , icon: <DescriptionIcon  />},
+         
+       
       ],
     },
     {
       heading: "DATA MANAGEMENT",
       items: [
-        { title: "App Configuration", url: "/admin/app-configuration", icon: <AccountTreeIcon /> },
-        { title: "Ticket Configuration", url: "/admin/ticket-configuration", icon: <ConfirmationNumberIcon /> },
+        { title: "App Configuration", url: "/admin/AppConfiguration", icon: <AccountTreeIcon /> },
+        { title: "Ticket Configuration", url: "/admin/TicketConfiguration", icon: <ConfirmationNumberIcon /> },
       ],
     },
     {
       heading: null, // No heading for logout
       items: [
-        { title: "logout", url: "/logout", icon: <ExitToAppIcon /> },
+        { title: "logout", url: "/", icon: <ExitToAppIcon /> },
       ],
     },
   ];
@@ -117,7 +114,7 @@ const Sidebar = () => {
           color: "#868aa8", // Font color
           transition: "width 0.3s ease",
           position: "relative",
-          height: "100vh", // Full height
+          height: "130vh", // Full height
           overflow: "hidden", // Hide scrollbar
           "&:hover": {
             overflowY: "auto", // Show scrollbar on hover

@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 const BreadcrumbsComponent = ({paths,title }) => {
   const pathname = usePathname();
   // const paths = pathname.split("/").filter((path) => path);
-  console.log("paths---,>",paths)
+
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

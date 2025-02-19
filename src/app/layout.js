@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
           <Navbar />
           <div className=" " style={{display: 'flex'}}>
           <Sidebar />
-          <div style={{display: 'inline-block', width:'100%', padding:'30px'}}>
+          <div style={{display: 'inline-block', width:'80%', padding:'30px',}}>
           {children}  </div>        </div>
 
           </ThemeProvider>
