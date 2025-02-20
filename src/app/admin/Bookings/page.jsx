@@ -1,5 +1,6 @@
 import React from 'react'
 import BreadcrumbsComponent from "@/components/BreadCrumb"
+import BookingMain from '@/components/Bookings/BookingMain'
 
 
 function page() {
@@ -13,7 +14,8 @@ const  paths = ["Service Provider", "Bookings"]
       paths={paths}
     />
   </div>
-    <div>page</div></>
+    <div><BookingMain/></div>
+    </>
  
   )
 }

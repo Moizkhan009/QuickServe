@@ -6,7 +6,11 @@ import BusinessIcon from "@mui/icons-material/Business";
 import BuildIcon from "@mui/icons-material/Build";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import ConsumerComponent from "@/components/users/consumerComponent"
+import ConsumerComponent from "./consumerComponent";
+import ServiceProvider from "./ServiceProvider";
+import Operations from "./Operations";
+import Driver from "./driver";
+
 
 
 
@@ -29,7 +33,7 @@ const TabMenu = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <AppBar position="static" color="primary">
+      <AppBar position="static" color="primary" >
         <Toolbar>
           <Tabs
             value={value}
@@ -59,10 +63,10 @@ const TabMenu = () => {
           </Box>
         ) : (
           <Box mt={2}>
-            {value === 0 && <ConsumerComponent style={{backgroundColor:"white"}}/>}
-            {value === 1 && <Typography variant="h6">Service Providers Section Content</Typography>}
-            {value === 2 && <Typography variant="h6">Operations Section Content</Typography>}
-            {value === 3 && <Typography variant="h6">Drivers Section Content</Typography>}
+            {value === 0 && <ConsumerComponent/>}
+            {value === 1 && <ServiceProvider/>}
+            {value === 2 && <Operations/>}
+            {value === 3 &&  <Driver/>}
           </Box>
         )}
       </Container>

@@ -1,5 +1,7 @@
 import React from 'react'
 import BreadcrumbsComponent from "@/components/BreadCrumb"
+import SPcomponent from '@/components/ServiceProviders/ServiceProviderComponent'
+ 
 
 function page() {
   const paths=["Service Providers"]
@@ -11,7 +13,11 @@ function page() {
       paths={paths}
     />
   </div>
-    <div>page</div></>
+  <div>
+  <SPcomponent/>
+  </div>
+ 
+    </>
  
   )
 }
