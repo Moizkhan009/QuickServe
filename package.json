@@ -19,7 +19,14 @@
     "dayjs": "^1.11.13",
     "next": "15.1.6",
     "react": "^19.0.0",
+<<<<<<< HEAD
     "react-dom": "^19.0.0"
+=======
+    "react-beautiful-dnd": "^13.1.1",
+    "react-dom": "^19.0.0",
+    "react-scrollbars-custom": "^4.1.1",
+    "react-toastify": "^11.0.3"
+>>>>>>> 42f09b9 (in progress)
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

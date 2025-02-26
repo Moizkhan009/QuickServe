@@ -2,9 +2,15 @@
 
 import React, { useState, useEffect } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
+<<<<<<< HEAD
 
 import Skeleton from '@mui/material/Skeleton';
 import dayjs from 'dayjs';
+=======
+import {Badge, Skeleton} from '@mui/material';
+
+
+>>>>>>> 42f09b9 (in progress)
 
 const Operations = () => {
  
@@ -69,7 +75,11 @@ const Operations = () => {
         User_Name: 'Salal',
         mobileNumber: '1234567890',
         email: 'khan.salal@example.com',
+<<<<<<< HEAD
         Type:'Front Office'
+=======
+        Type:'Front Officer'
+>>>>>>> 42f09b9 (in progress)
         
       },
     // Add more rows as needed
@@ -82,8 +92,32 @@ const Operations = () => {
     { field: 'User_Name', headerName: 'User Name', width: 150 },
     { field: 'mobileNumber', headerName: 'Mobile Number', width: 150 },
     { field: 'email', headerName: 'Email', width: 200 },
+<<<<<<< HEAD
     { field: 'Type', headerName: 'Type', width: 150 },
   
+=======
+    {
+      field: 'Type',
+      headerName: 'Type',
+      width: 130,
+      filterable: true,
+      renderCell: (params) => (
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%',height:'100%' }}>
+          <Badge
+            badgeContent={params.value}
+            color={
+              params.value === 'Administrator' ? 'primary' :
+              
+              params.value === 'Front Officer' ? 'secondary' :
+              params.value === 'Back Officer' ? 'warning' :'default'
+
+              
+            }
+          />
+        </div>
+      ),
+    },  
+>>>>>>> 42f09b9 (in progress)
   ];
 
   // Simulate loading delay

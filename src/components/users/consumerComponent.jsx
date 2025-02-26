@@ -1,6 +1,10 @@
 "use client";
 
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
+=======
+import React, { useState, useEffect, useMemo } from 'react';
+>>>>>>> 42f09b9 (in progress)
 import { DataGrid } from '@mui/x-data-grid';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
@@ -10,11 +14,16 @@ import Skeleton from '@mui/material/Skeleton';
 import dayjs from 'dayjs';
 
 const ConsumerComponent = () => {
+<<<<<<< HEAD
   const [startDate, setStartDate] = useState(dayjs());
+=======
+  const [startDate, setStartDate] = useState(null); // Initial date is null
+>>>>>>> 42f09b9 (in progress)
   const [isFlagged, setIsFlagged] = useState(true);
   const [isAllProducts, setIsAllProducts] = useState(false);
   const [loading, setLoading] = useState(true);
 
+<<<<<<< HEAD
   // Sample data
   const rows = [
     {
@@ -46,6 +55,40 @@ const ConsumerComponent = () => {
       isActive: false,
     },
     {
+=======
+  // Sample data (memoized to avoid unnecessary re-renders)
+  const rows = useMemo(
+    () => [
+      {
+        id: 1,
+        firstName: 'John',
+        lastName: 'Doe',
+        mobileNumber: '1234567890',
+        email: 'john.doe@example.com',
+        consumerProducts: 'Product A',
+        lastBooking: '2023-10-01',
+        activeSince: '2022-01-01',
+        noOfBooking: 5,
+        optNote: 'Some note',
+        joiningDate: '2021-01-01',
+        isActive: true,
+      },
+      {
+        id: 2,
+        firstName: 'Khan',
+        lastName: 'Salal',
+        mobileNumber: '1234567890',
+        email: 'khan.salal@example.com',
+        consumerProducts: 'Product B',
+        lastBooking: '2023-09-15',
+        activeSince: '2021-05-01',
+        noOfBooking: 3,
+        optNote: 'Another note',
+        joiningDate: '2020-01-01',
+        isActive: false,
+      },
+      {
+>>>>>>> 42f09b9 (in progress)
         id: 3,
         firstName: 'John',
         lastName: 'Doe',
@@ -101,8 +144,15 @@ const ConsumerComponent = () => {
         joiningDate: '2020-01-01',
         isActive: false,
       },
+<<<<<<< HEAD
     // Add more rows as needed
   ];
+=======
+      // Add more rows as needed
+    ],
+    []
+  );
+>>>>>>> 42f09b9 (in progress)
 
   // Columns for DataGrid
   const columns = [
@@ -151,6 +201,20 @@ const ConsumerComponent = () => {
     // Add your logic here
   };
 
+<<<<<<< HEAD
+=======
+  // Filter rows based on the selected date
+  const filteredRows = useMemo(() => {
+    if (!startDate) {
+      return rows; // Show all rows if no date is selected
+    }
+    return rows.filter((row) => {
+      const rowDate = dayjs(row.lastBooking);
+      return rowDate.isSame(startDate, 'day');
+    });
+  }, [rows, startDate]);
+
+>>>>>>> 42f09b9 (in progress)
   return (
     <div style={{ padding: '20px', maxWidth: '1200px', margin: '0 auto', backgroundColor: 'white' }}>
       {/* Date Picker and Switches */}
@@ -212,7 +276,11 @@ const ConsumerComponent = () => {
       ) : (
         <div style={{ height: 400, width: '100%' }}>
           <DataGrid
+<<<<<<< HEAD
             rows={rows}
+=======
+            rows={filteredRows}
+>>>>>>> 42f09b9 (in progress)
             columns={columns}
             pageSize={5}
             rowsPerPageOptions={[5, 10, 20]}

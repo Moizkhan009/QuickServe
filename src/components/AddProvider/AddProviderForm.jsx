@@ -74,10 +74,19 @@ const AddProviderForm = () => {
     e.preventDefault();
     console.log('Form Data Submitted:', formData);
     // Add your form submission logic here
+<<<<<<< HEAD
   };
 
   return (
     <div style={{ padding: '10px', maxWidth: '1200px', margin: '0 auto', backgroundColor: 'white' }}>
+=======
+  }; 
+ 
+  return (
+   
+    <div style={{ padding: '10px', maxWidth: '1200px', margin: '0 auto', backgroundColor: 'white' }}>
+    
+>>>>>>> 42f09b9 (in progress)
       <Container maxWidth="md" style={{ marginTop: '20px', marginBottom: '40px' }}>
         <Typography variant="h4" gutterBottom>
           Account Details
@@ -343,12 +352,25 @@ const AddProviderForm = () => {
                 />
               </Grid>
 
+<<<<<<< HEAD
               {/* Submit Button */}
               <Grid item xs={12}>
                 <Button type="submit" variant="contained"  fullWidth  style={{ backgroundColor: '#9ed568' }}>
                   Add Provider
                 </Button>
               </Grid>
+=======
+                  {/* Submit Button */}
+    
+     <Grid item xs={12}>
+     <Button type="submit" variant="contained"  fullWidth  style={{ backgroundColor: '#9ed568' }}>
+       Add Provider
+     </Button>
+       </Grid>
+   
+
+             
+>>>>>>> 42f09b9 (in progress)
             </Grid>
           </form>
         )}

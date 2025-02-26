@@ -32,6 +32,10 @@ const TabMenu = () => {
   }, []);
 
   return (
+<<<<<<< HEAD
+=======
+    <div style={{ padding: '20px', maxWidth: '1200px', margin: '0 auto', backgroundColor: 'white' }}>
+>>>>>>> 42f09b9 (in progress)
     <ThemeProvider theme={theme}>
       <AppBar position="static" color="primary" >
         <Toolbar>
@@ -55,7 +59,13 @@ const TabMenu = () => {
           />
         </Toolbar>
       </AppBar>
+<<<<<<< HEAD
       <Container>
+=======
+    
+      <Container>
+        
+>>>>>>> 42f09b9 (in progress)
         {loading ? (
           <Box mt={2}>
             <Skeleton variant="text" width={210} height={40} />
@@ -70,7 +80,13 @@ const TabMenu = () => {
           </Box>
         )}
       </Container>
+<<<<<<< HEAD
     </ThemeProvider>
+=======
+      
+    </ThemeProvider>
+    </div>
+>>>>>>> 42f09b9 (in progress)
   );
 };
 

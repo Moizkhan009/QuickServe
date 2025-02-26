@@ -1,5 +1,9 @@
 import React from 'react'
 import BreadcrumbsComponent from "@/components/BreadCrumb"
+<<<<<<< HEAD
+=======
+import ServiceProviderList from '@/components/featuredSp/MainComponenet'
+>>>>>>> 42f09b9 (in progress)
 
 
 function page() {
@@ -12,7 +16,11 @@ function page() {
       paths={paths}
     />
   </div>
+<<<<<<< HEAD
     <div>page</div></>
+=======
+    <div><ServiceProviderList/></div></>
+>>>>>>> 42f09b9 (in progress)
  
   )
 }

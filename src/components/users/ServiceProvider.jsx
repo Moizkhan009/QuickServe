@@ -2,9 +2,15 @@
 
 import React, { useState, useEffect } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
+<<<<<<< HEAD
 
 import Skeleton from '@mui/material/Skeleton';
 import dayjs from 'dayjs';
+=======
+import {  Badge,Button, Skeleton } from '@mui/material';
+
+
+>>>>>>> 42f09b9 (in progress)
 
 const ServiceProvider = () => {
  
@@ -78,12 +84,38 @@ const ServiceProvider = () => {
   // Columns for DataGrid
   const columns = [
     { field: 'id', headerName: 'ID', width: 100 },
+<<<<<<< HEAD
     { field: 'Name', headerName: ' Name', width: 150 },
     { field: 'User_Name', headerName: 'User Name', width: 150 },
     { field: 'mobileNumber', headerName: 'Mobile Number', width: 150 },
     { field: 'email', headerName: 'Email', width: 200 },
     { field: 'Type', headerName: 'Type', width: 150 },
   
+=======
+    { field: 'Name', headerName: 'Name', width: 150 },
+    { field: 'User_Name', headerName: 'User Name', width: 150 },
+    { field: 'mobileNumber', headerName: 'Mobile Number', width: 150 },
+    { field: 'email', headerName: 'Email', width: 200 },
+    {
+      field: 'Type',
+      headerName: 'Type',
+      width: 130,
+      filterable: true,
+      renderCell: (params) => (
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%',height:'100%' }}>
+          <Badge
+            badgeContent={params.value}
+            color={
+              params.value === 'Service Provider' ? 'primary' :'default'
+              
+              
+              
+            }
+          />
+        </div>
+      ),
+    },  
+>>>>>>> 42f09b9 (in progress)
   ];
 
   // Simulate loading delay

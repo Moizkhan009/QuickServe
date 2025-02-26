@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
+<<<<<<< HEAD
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
@@ -14,6 +15,20 @@ const Driver = () => {
   const [isFlagged, setIsFlagged] = useState(true);
   const [isAllProducts, setIsAllProducts] = useState(false);
   const [loading, setLoading] = useState(true);
+=======
+import {Badge, Skeleton,Button} from '@mui/material';
+import { Search as SearchIcon, Add as AddIcon } from '@mui/icons-material';
+
+
+const Driver = () => {
+
+  const [loading, setLoading] = useState(true);
+   // Handle Add Provider button click
+   const handleAddDriver = () => {
+    alert('Add Driver button clicked!');
+    // You can add your logic here to open a modal or navigate to a form.
+  };
+>>>>>>> 42f09b9 (in progress)
 
   // Sample data
   const rows = [
@@ -69,7 +84,11 @@ const Driver = () => {
         email: 'john.doe@example.com',
        Gender:'Male',
        ServiceProvider:'TestSp',
+<<<<<<< HEAD
        Status:'Available',
+=======
+       Status:'Not Available',
+>>>>>>> 42f09b9 (in progress)
        
       },
       {
@@ -95,8 +114,29 @@ const Driver = () => {
     { field: 'email', headerName: 'Email', width: 200 },
     { field: 'Gender', headerName: 'Gender', width: 150 },
     { field: 'ServiceProvider', headerName: 'Service Provider', width: 150 },
+<<<<<<< HEAD
     { field: 'Status', headerName: 'Status ', width: 150 },
    
+=======
+    {
+      field: 'Status',
+      headerName: 'Status',
+      width: 130,
+      filterable: true,
+      renderCell: (params) => (
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%',height:'100%' }}>
+          <Badge
+            badgeContent={params.value}
+            color={
+              params.value === 'Available' ? 'success' :
+              params.value === ' Not Available' ? 'error' :'default'
+              
+            }
+          />
+        </div>
+      ),
+    },   
+>>>>>>> 42f09b9 (in progress)
  
   ];
 
@@ -110,8 +150,13 @@ const Driver = () => {
 
   return (
     <div style={{ padding: '20px', maxWidth: '1200px', margin: '0 auto', backgroundColor: 'white' }}>
+<<<<<<< HEAD
      
 
+=======
+    
+  
+>>>>>>> 42f09b9 (in progress)
       {/* Data Table */}
       {loading ? (
         // Skeleton Loading
@@ -139,6 +184,29 @@ const Driver = () => {
           />
         </div>
       )}
+<<<<<<< HEAD
+=======
+
+       <div style={{marginLeft:'80%',marginTop:'20px'}}>
+       {/* Add Driver Button */}
+       <Button
+                 variant="contained"
+                 startIcon={<AddIcon />}
+                 onClick={handleAddDriver}
+                 style={{
+                   backgroundColor: '#9ed568',
+                   color: '#fff',
+                   borderRadius: '24px',
+                   textTransform: 'none',
+                   fontSize: '14px',
+                   fontWeight: '500',
+                 }}
+               >
+                 Add Driver
+               </Button>
+     
+          </div>
+>>>>>>> 42f09b9 (in progress)
     </div>
   );
 };
